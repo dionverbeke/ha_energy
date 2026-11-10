@@ -1,0 +1,181 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Home Energy Monitor",
+        "description": "Pick the sensors for your installation. Only the grid sensor is required; leave anything you don't have empty.",
+        "data": {
+          "grid_power": "Grid power",
+          "grid_export_power": "Grid export power (optional)",
+          "grid_invert": "Invert grid sign",
+          "solar_power": "Solar power",
+          "battery_power": "Battery power",
+          "battery_invert": "Invert battery sign",
+          "battery_soc": "Battery state of charge",
+          "heat_pump_power": "Heat pump power",
+          "ev_power": "Car charger power",
+          "price_import": "Electricity price (import)",
+          "price_export": "Feed-in price (export)"
+        },
+        "data_description": {
+          "grid_power": "Net grid power (positive = importing). If you have separate import and export sensors, put the import sensor here.",
+          "grid_export_power": "Only if your meter reports export as a separate positive sensor.",
+          "grid_invert": "Turn on if your grid sensor is negative while importing.",
+          "solar_power": "Current solar production.",
+          "battery_power": "Positive = discharging, negative = charging (use the invert switch if yours is the other way round).",
+          "battery_invert": "Turn on if your battery sensor is positive while charging.",
+          "battery_soc": "Battery level in %.",
+          "heat_pump_power": "Power used by the heat pump.",
+          "ev_power": "Power used by the EV charger.",
+          "price_import": "Sensor with the current all-in price per kWh (€/kWh, c€/kWh or €/MWh are converted automatically).",
+          "price_export": "Sensor with the current price you receive per exported kWh."
+        }
+      }
+    },
+    "error": {
+      "duplicate_sensor": "This sensor is already used for another field.",
+      "export_without_import": "Set an import price sensor too."
+    },
+    "abort": {
+      "single_instance_allowed": "Home Energy Monitor is already set up."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Home Energy Monitor",
+        "description": "Pick the sensors for your installation. Only the grid sensor is required; leave anything you don't have empty.",
+        "data": {
+          "grid_power": "Grid power",
+          "grid_export_power": "Grid export power (optional)",
+          "grid_invert": "Invert grid sign",
+          "solar_power": "Solar power",
+          "battery_power": "Battery power",
+          "battery_invert": "Invert battery sign",
+          "battery_soc": "Battery state of charge",
+          "heat_pump_power": "Heat pump power",
+          "ev_power": "Car charger power",
+          "price_import": "Electricity price (import)",
+          "price_export": "Feed-in price (export)"
+        },
+        "data_description": {
+          "grid_power": "Net grid power (positive = importing). If you have separate import and export sensors, put the import sensor here.",
+          "grid_export_power": "Only if your meter reports export as a separate positive sensor.",
+          "grid_invert": "Turn on if your grid sensor is negative while importing.",
+          "solar_power": "Current solar production.",
+          "battery_power": "Positive = discharging, negative = charging (use the invert switch if yours is the other way round).",
+          "battery_invert": "Turn on if your battery sensor is positive while charging.",
+          "battery_soc": "Battery level in %.",
+          "heat_pump_power": "Power used by the heat pump.",
+          "ev_power": "Power used by the EV charger.",
+          "price_import": "Sensor with the current all-in price per kWh (€/kWh, c€/kWh or €/MWh are converted automatically).",
+          "price_export": "Sensor with the current price you receive per exported kWh."
+        }
+      }
+    },
+    "error": {
+      "duplicate_sensor": "This sensor is already used for another field.",
+      "export_without_import": "Set an import price sensor too."
+    }
+  },
+  "entity": {
+    "sensor": {
+      "house_power": {
+        "name": "House power"
+      },
+      "other_power": {
+        "name": "Other consumers power"
+      },
+      "quarter_peak": {
+        "name": "Current quarter-hour peak"
+      },
+      "month_peak": {
+        "name": "Monthly peak (capacity tariff)"
+      },
+      "house_energy": {
+        "name": "House energy"
+      },
+      "other_energy": {
+        "name": "Other consumers energy"
+      },
+      "heat_pump_energy": {
+        "name": "Heat pump energy"
+      },
+      "ev_energy": {
+        "name": "Car charger energy"
+      },
+      "solar_energy": {
+        "name": "Solar energy"
+      },
+      "grid_import_energy": {
+        "name": "Grid import energy"
+      },
+      "grid_export_energy": {
+        "name": "Grid export energy"
+      },
+      "battery_charge_energy": {
+        "name": "Battery charged energy"
+      },
+      "battery_discharge_energy": {
+        "name": "Battery discharged energy"
+      },
+      "solar_to_home_energy": {
+        "name": "Solar used directly"
+      },
+      "battery_to_home_energy": {
+        "name": "Battery used by home"
+      },
+      "grid_to_home_energy": {
+        "name": "Grid used by home"
+      },
+      "house_today": {
+        "name": "House energy today"
+      },
+      "heat_pump_today": {
+        "name": "Heat pump energy today"
+      },
+      "ev_today": {
+        "name": "Car charger energy today"
+      },
+      "solar_today": {
+        "name": "Solar energy today"
+      },
+      "grid_import_today": {
+        "name": "Grid import today"
+      },
+      "grid_export_today": {
+        "name": "Grid export today"
+      },
+      "self_sufficiency_today": {
+        "name": "Self-sufficiency today"
+      },
+      "self_consumption_today": {
+        "name": "Self-consumption today"
+      },
+      "import_cost": {
+        "name": "Import cost"
+      },
+      "export_revenue": {
+        "name": "Export revenue"
+      },
+      "heat_pump_cost": {
+        "name": "Heat pump cost"
+      },
+      "ev_cost": {
+        "name": "Car charging cost"
+      },
+      "net_cost_today": {
+        "name": "Net cost today"
+      },
+      "heat_pump_cost_today": {
+        "name": "Heat pump cost today"
+      },
+      "ev_cost_today": {
+        "name": "Car charging cost today"
+      },
+      "other_cost_today": {
+        "name": "Other consumers cost today"
+      }
+    }
+  }
+}

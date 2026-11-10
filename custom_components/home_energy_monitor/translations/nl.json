@@ -1,0 +1,181 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Home Energy Monitor",
+        "description": "Kies de sensoren van je installatie. Alleen de netsensor is verplicht; laat leeg wat je niet hebt.",
+        "data": {
+          "grid_power": "Netvermogen",
+          "grid_export_power": "Injectievermogen (optioneel)",
+          "grid_invert": "Teken net omkeren",
+          "solar_power": "Zonnepanelen vermogen",
+          "battery_power": "Batterijvermogen",
+          "battery_invert": "Teken batterij omkeren",
+          "battery_soc": "Laadtoestand batterij",
+          "heat_pump_power": "Vermogen warmtepomp",
+          "ev_power": "Vermogen laadpaal",
+          "price_import": "Elektriciteitsprijs (afname)",
+          "price_export": "Injectieprijs"
+        },
+        "data_description": {
+          "grid_power": "Netto vermogen van/naar het net (positief = afname). Heb je aparte afname- en injectiesensoren, kies hier de afnamesensor.",
+          "grid_export_power": "Alleen als je meter injectie als aparte positieve sensor geeft.",
+          "grid_invert": "Aanzetten als je netsensor negatief is bij afname.",
+          "solar_power": "Huidige productie van de zonnepanelen.",
+          "battery_power": "Positief = ontladen, negatief = laden (gebruik de omkeerschakelaar als het bij jou andersom is).",
+          "battery_invert": "Aanzetten als je batterijsensor positief is tijdens het laden.",
+          "battery_soc": "Batterijniveau in %.",
+          "heat_pump_power": "Verbruik van de warmtepomp.",
+          "ev_power": "Verbruik van de laadpaal.",
+          "price_import": "Sensor met de huidige all-in prijs per kWh (€/kWh, c€/kWh of €/MWh worden automatisch omgerekend).",
+          "price_export": "Sensor met de huidige vergoeding per geïnjecteerde kWh."
+        }
+      }
+    },
+    "error": {
+      "duplicate_sensor": "Deze sensor wordt al voor een ander veld gebruikt.",
+      "export_without_import": "Stel ook een afnameprijs-sensor in."
+    },
+    "abort": {
+      "single_instance_allowed": "Home Energy Monitor is al ingesteld."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Home Energy Monitor",
+        "description": "Kies de sensoren van je installatie. Alleen de netsensor is verplicht; laat leeg wat je niet hebt.",
+        "data": {
+          "grid_power": "Netvermogen",
+          "grid_export_power": "Injectievermogen (optioneel)",
+          "grid_invert": "Teken net omkeren",
+          "solar_power": "Zonnepanelen vermogen",
+          "battery_power": "Batterijvermogen",
+          "battery_invert": "Teken batterij omkeren",
+          "battery_soc": "Laadtoestand batterij",
+          "heat_pump_power": "Vermogen warmtepomp",
+          "ev_power": "Vermogen laadpaal",
+          "price_import": "Elektriciteitsprijs (afname)",
+          "price_export": "Injectieprijs"
+        },
+        "data_description": {
+          "grid_power": "Netto vermogen van/naar het net (positief = afname). Heb je aparte afname- en injectiesensoren, kies hier de afnamesensor.",
+          "grid_export_power": "Alleen als je meter injectie als aparte positieve sensor geeft.",
+          "grid_invert": "Aanzetten als je netsensor negatief is bij afname.",
+          "solar_power": "Huidige productie van de zonnepanelen.",
+          "battery_power": "Positief = ontladen, negatief = laden (gebruik de omkeerschakelaar als het bij jou andersom is).",
+          "battery_invert": "Aanzetten als je batterijsensor positief is tijdens het laden.",
+          "battery_soc": "Batterijniveau in %.",
+          "heat_pump_power": "Verbruik van de warmtepomp.",
+          "ev_power": "Verbruik van de laadpaal.",
+          "price_import": "Sensor met de huidige all-in prijs per kWh (€/kWh, c€/kWh of €/MWh worden automatisch omgerekend).",
+          "price_export": "Sensor met de huidige vergoeding per geïnjecteerde kWh."
+        }
+      }
+    },
+    "error": {
+      "duplicate_sensor": "Deze sensor wordt al voor een ander veld gebruikt.",
+      "export_without_import": "Stel ook een afnameprijs-sensor in."
+    }
+  },
+  "entity": {
+    "sensor": {
+      "house_power": {
+        "name": "Vermogen huis"
+      },
+      "other_power": {
+        "name": "Vermogen overige verbruikers"
+      },
+      "quarter_peak": {
+        "name": "Huidige kwartierpiek"
+      },
+      "month_peak": {
+        "name": "Maandpiek (capaciteitstarief)"
+      },
+      "house_energy": {
+        "name": "Energie huis"
+      },
+      "other_energy": {
+        "name": "Energie overige verbruikers"
+      },
+      "heat_pump_energy": {
+        "name": "Energie warmtepomp"
+      },
+      "ev_energy": {
+        "name": "Energie laadpaal"
+      },
+      "solar_energy": {
+        "name": "Energie zonnepanelen"
+      },
+      "grid_import_energy": {
+        "name": "Afgenomen energie"
+      },
+      "grid_export_energy": {
+        "name": "Geïnjecteerde energie"
+      },
+      "battery_charge_energy": {
+        "name": "Energie in batterij"
+      },
+      "battery_discharge_energy": {
+        "name": "Energie uit batterij"
+      },
+      "solar_to_home_energy": {
+        "name": "Zonne-energie direct verbruikt"
+      },
+      "battery_to_home_energy": {
+        "name": "Batterij-energie verbruikt"
+      },
+      "grid_to_home_energy": {
+        "name": "Netstroom verbruikt"
+      },
+      "house_today": {
+        "name": "Energie huis vandaag"
+      },
+      "heat_pump_today": {
+        "name": "Energie warmtepomp vandaag"
+      },
+      "ev_today": {
+        "name": "Energie laadpaal vandaag"
+      },
+      "solar_today": {
+        "name": "Zonne-energie vandaag"
+      },
+      "grid_import_today": {
+        "name": "Afname vandaag"
+      },
+      "grid_export_today": {
+        "name": "Injectie vandaag"
+      },
+      "self_sufficiency_today": {
+        "name": "Zelfvoorziening vandaag"
+      },
+      "self_consumption_today": {
+        "name": "Eigen verbruik vandaag"
+      },
+      "import_cost": {
+        "name": "Kosten afname"
+      },
+      "export_revenue": {
+        "name": "Opbrengst injectie"
+      },
+      "heat_pump_cost": {
+        "name": "Kosten warmtepomp"
+      },
+      "ev_cost": {
+        "name": "Kosten laden auto"
+      },
+      "net_cost_today": {
+        "name": "Netto kosten vandaag"
+      },
+      "heat_pump_cost_today": {
+        "name": "Kosten warmtepomp vandaag"
+      },
+      "ev_cost_today": {
+        "name": "Kosten laden auto vandaag"
+      },
+      "other_cost_today": {
+        "name": "Kosten overige verbruikers vandaag"
+      }
+    }
+  }
+}
